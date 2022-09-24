@@ -2,9 +2,14 @@ import React from 'react';
 
 
 function Profile(props) {
-  return (
-<div>
 
+function handleClick(event) {
+  
+}
+
+  return (
+
+<div>
     <div>
         <h4> {props.fname} </h4>
     </div>
