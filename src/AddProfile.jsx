@@ -17,7 +17,7 @@ import { v4 } from "uuid";
 import { storage } from "./firebase";
 
 import { useState } from "react";
-function Profile(props) {
+function AddProfile(props) {
 
   const profilesCollectionRef = collection(db,"profiles")
   const certificatesCollectionRef = collection(db,"certificates")
@@ -31,17 +31,17 @@ function Profile(props) {
   }
   function nukeDatabase() {
 
-          getDocs(profilesCollectionRef).then((response) => {
-response.docs.forEach((item) => {
-   deleteDoc(doc(db, "profiles", `${item.id}`));
-}); })
+              getDocs(profilesCollectionRef).then((response) => {
+                  response.docs.forEach((item) => {
+                     deleteDoc(doc(db, "profiles", `${item.id}`));
+                  }); })
 
-getDocs(certificatesCollectionRef).then((response) => {
-response.docs.forEach((item) => {
-deleteDoc(doc(db, "certificates", `${item.id}`));
-});
-})
-}
+              getDocs(certificatesCollectionRef).then((response) => {
+                  response.docs.forEach((item) => {
+                      deleteDoc(doc(db, "certificates", `${item.id}`));
+        });
+      })
+    }
 
 function handleClick(event) {
       event.preventDefault()
@@ -64,7 +64,6 @@ function handleClick(event) {
             count = 0
           } else if (count == 0) {
             count = 0
-          } else {
           }
 
           console.log(`response is ${response.docs}`);
@@ -159,4 +158,4 @@ function handleClick(event) {
 }
 
 
-export default Profile;
+export default AddProfile;
