@@ -2,7 +2,7 @@ import './App.css';
 import AddProfile from './AddProfile.jsx'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from './Header';
-
+import PDFPage from './PDFPage.js'
 
 function App() {
 
@@ -13,8 +13,7 @@ function App() {
             <Route exact path="/">
                 <div className="App">
                   <header className="App-header">
-                    <h3>Add Profile</h3>
-                      <AddProfile/>
+                      <PDFPage/>
                     </header>
                 </div>
             </Route>
