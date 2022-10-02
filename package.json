@@ -2,6 +2,7 @@
   "name": "certificate-search",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://localhost:3000",
   "dependencies": {
     "@react-pdf-viewer/core": "^2.3.2",
     "@react-pdf/renderer": "^3.0.0",
