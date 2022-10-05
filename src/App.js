@@ -1,5 +1,4 @@
 import './App.css';
-import AddProfile from './AddProfile.jsx'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from './Header';
 import PDFPage from './PDFPage.js'

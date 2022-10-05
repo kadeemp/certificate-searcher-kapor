@@ -3,7 +3,6 @@ import {
   collection,
   getDocs,
   addDoc,
-  updateDoc,
   deleteDoc,
   doc,
 } from "firebase/firestore";
@@ -22,13 +21,9 @@ function AddProfile(props) {
   const profilesCollectionRef = collection(db,"profiles")
   const certificatesCollectionRef = collection(db,"certificates")
   const [certificateUpload, setNewCertificateUpload] = useState(null)
-  const [newName, setNewName] = useState("")
   const [newfName, setNewfName] = useState("")
   const [newlName, setNewlName] = useState("")
 
-  function reloadPage() {
-    window.location.reload(false)
-  }
   function nukeDatabase() {
 
               getDocs(profilesCollectionRef).then((response) => {
@@ -62,7 +57,7 @@ function handleClick(event) {
 
           if (count < 0 ) {
             count = 0
-          } else if (count == 0) {
+          } else if (count === 0) {
             count = 0
           }
 

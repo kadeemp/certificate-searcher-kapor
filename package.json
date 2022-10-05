@@ -4,7 +4,8 @@
   "private": true,
   "proxy": "https://localhost:3000",
   "engines": {
-    "node": "16.17.1"
+    "node": "16.17.1",
+    "npm": "8.19.2"
   },
   "dependencies": {
     "@react-pdf-viewer/core": "^2.3.2",
